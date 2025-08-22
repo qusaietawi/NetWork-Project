@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Details – Al-Ahli Arab Hospital Bombing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+  <a href="/main_en.html">Home</a>
+  <a href="/html/event_details.html">Event Details</a>
+  <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" target="_blank" rel="noopener">Textbook</a>
+  <a href="https://ritaj.birzeit.edu/" target="_blank" rel="noopener">Ritaj</a>
+
+  <!-- زر تحويل اللغة -->
+  <button id="lang-toggle" title="Switch to Arabic" style="cursor:pointer;">العربية</button>
+
+  <button id="dark-toggle" class="dark-btn" title="Toggle Dark Mode">Dark Mode</button>
+</nav>
+
+
+  <!-- Title -->
+  <header class="hero" data-aos="fade-up">
+    <h1 class="typing-title">Al-Ahli Arab Hospital Bombing</h1>
+    <p class="subtitle">A heartbreaking event that shocked the world</p>
+  </header>
+
+  <!-- Event Section -->
+  <section class="event-details" data-aos="fade-up">
+    <div class="media-box">
+      <img src="/imgs/hospital.jpg" alt="Hospital Bombing" class="event-media">
+    </div>
+
+    <div class="event-text">
+      <p><strong>Date:</strong> October 17, 2023</p>
+      <p><strong>Location:</strong> Al-Ahli Arab Hospital, Gaza</p>
+
+      <p>
+        On the evening of October 17, 2023, a devastating airstrike hit the Al-Ahli Arab Hospital in central Gaza,
+        resulting in the tragic death of over 500 civilians. The hospital was serving as a refuge for hundreds of displaced individuals.
+      </p>
+
+      <ul>
+        <li>500+ casualties</li>
+        <li>Children and elderly among the victims</li>
+        <li>International outrage and calls for investigation</li>
+      </ul>
+
+      <p>
+        The strike caused mass panic. The world watched in horror as footage of the destruction spread online,
+        showing desperate families searching for survivors under the rubble.
+      </p>
+    </div>
+
+    <div class="media-box">
+      <video controls class="event-media">
+        <source src="/imgs/hospital_clip.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <p>❤️ Full solidarity and support with the people of Gaza – You are not forgotten 🇵🇸</p>
+    <p>&copy; 2025 ENCS3320 - Computer Networks | All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Dark Mode
+    const darkToggle = document.getElementById("dark-toggle");
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+    darkToggle.onclick = () => {
+      body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    };
+
+    // Language Toggle
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      window.location.href = "/html/event_details_ar.html";
+    });
+  </script>
+</body>
+</html>

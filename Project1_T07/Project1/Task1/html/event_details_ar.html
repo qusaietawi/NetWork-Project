@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تفاصيل الحدث – قصف مستشفى الأهلي العربي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <nav>
+  <a href="/main_ar.html">الرئيسية</a>
+  <a href="/html/event_details_ar.html">تفاصيل الحدث</a>
+  <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" target="_blank" rel="noopener">موقع الكتاب</a>
+  <a href="https://ritaj.birzeit.edu/" target="_blank" rel="noopener">رتاج</a>
+
+  <button id="lang-toggle" title="Switch to English" style="cursor:pointer;">English</button>
+
+  <button id="dark-toggle" class="dark-btn" title="الوضع الليلي">الوضع الليلي</button>
+</nav>
+
+  <header class="hero" data-aos="fade-up">
+    <h1 class="typing-title">قصف مستشفى الأهلي العربي</h1>
+    <p class="subtitle">حدث مأساوي هز العالم</p>
+  </header>
+
+  <section class="event-details" data-aos="fade-up">
+    <div class="media-box">
+      <img src="/imgs/hospital.jpg" alt="قصف المستشفى" class="event-media" />
+    </div>
+
+    <div class="event-text">
+      <p>
+        في 17 أكتوبر 2023، تعرض مستشفى الأهلي في غزة لقصف مدمر، مما أسفر عن مقتل أكثر من 500 مدني.
+        كان المستشفى ملجأ لمئات النازحين قبل أن يتحول إلى أنقاض.
+      </p>
+
+      <ul>
+        <li>أكثر من 500 ضحية</li>
+        <li>عدد كبير من الأطفال وكبار السن من الضحايا</li>
+        <li>ردود فعل عالمية واسعة ودعوات للتحقيق الدولي</li>
+      </ul>
+
+      <p>
+        أثار القصف ذعراً وحالة صدمة في المجتمع الدولي. تداولت الصور ومقاطع الفيديو التي تظهر الدمار والبحث عن المفقودين.
+      </p>
+    </div>
+
+    <div class="media-box">
+      <video controls class="event-media">
+        <source src="/imgs/hospital_clip.mp4" type="video/mp4" />
+        لا يدعم متصفحك عرض الفيديو.
+      </video>
+    </div>
+  </section>
+
+  <hr />
+
+  <footer>
+    <p>❤️ كل الدعم والتضامن مع أهلنا في غزة – لن ننساكم 🇵🇸</p>
+    <p>&copy; 2025 ENCS3320 - شبكات الحاسوب | جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // تبديل الوضع الليلي
+    const darkToggle = document.getElementById("dark-toggle");
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+    darkToggle.onclick = () => {
+      body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+    };
+
+    // تبديل اللغة إلى الإنجليزية
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      window.location.href = "/html/event_details.html";
+    });
+  </script>
+</body>
+</html>

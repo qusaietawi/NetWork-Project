@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENCS3320-T1243</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <a href="/main_en.html">Home</a>
+  <a href="/html/event_details.html">Event Details</a>
+  <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" target="_blank" rel="noopener">Textbook</a>
+  <a href="https://ritaj.birzeit.edu/" target="_blank" rel="noopener">Ritaj</a>
+
+  <!-- زر تحويل اللغة -->
+  <button id="lang-toggle" title="Switch to Arabic" style="cursor:pointer;">العربية</button>
+
+  <button id="dark-toggle" class="dark-btn" title="Toggle Dark Mode">Dark Mode </button>
+</nav>
+
+<script>
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    // عند الضغط على الزر بالإنجليزية، انتقل للصفحة العربية المكافئة
+    window.location.href = '/html/main_ar.html';
+  });
+</script>
+
+
+  <!-- Hero Section -->
+  <header class="hero" data-aos="fade-up">
+    <h1>Welcome to <span class="highlight">Computer Networks</span> Webserver</h1>
+<p class="subtitle">In the world of networking, we track every step, every idea, and every story.</p>
+  </header>
+
+  <!-- Team Section -->
+  <section class="team-section" data-aos="fade-up">
+    <h2>🌐 Meet the Team</h2>
+    <div class="team-container">
+      <div class="member">
+        <img src="/imgs/member1.png" alt="Qusai Etawi" />
+        <h3>Qusai Etawi</h3>
+        <p>ID: 1221323</p>
+        <p>JavaFX and Python developer, systems lover, and football fan.</p>
+      </div>
+      <div class="member">
+        <img src="/imgs/member2.png" alt="Ali Hamza" />
+        <h3>Ali Hamza</h3>
+        <p>ID: 1220220</p>
+        <p>Passionate about networks and cybersecurity. Gamer and blogger.</p>
+      </div>
+      <div class="member">
+        <img src="/imgs/member3.png" alt="Mahmoud Kafafi" />
+        <h3>Mahmoud Kafafi</h3>
+        <p>ID: 1221974</p>
+        <p>Front-end specialist with flair for design and digital art.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gaza Section -->
+  <section class="gaza-section" data-aos="fade-up">
+    <h2>🇵🇸 Gaza Suffering – Facts and Pain</h2>
+    <div class="gaza-content">
+      <img src="/imgs/gaza.jpg" alt="Gaza Crisis" />
+      <div class="gaza-text">
+        <p><span class="highlight">Gaza</span> has endured countless tragedies due to the ongoing war. Thousands have lost their lives, and many more have been displaced multiple times.</p>
+        <p class="italic">Families suffer from lack of food and water. Children live in fear. The humanitarian crisis grows deeper each day.</p>
+        <ul>
+          <li>No access to clean water</li>
+          <li>Electricity cut off for days</li>
+          <li>Destroyed hospitals and schools</li>
+        </ul>
+        <ol>
+          <li>Trauma from repeated bombings</li>
+          <li>Loss of homes and identity</li>
+          <li>Wounds that last beyond the war</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Form -->
+  <section class="search-section" data-aos="fade-up">
+    <h2>🔍 Search an Event (Gaza)</h2>
+    <form method="GET" action="/event">
+      <label for="topic">Enter keyword:</label>
+      <input type="text" id="topic" name="topic" placeholder="e.g., hospital, bombing, video" required>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>❤️ Full solidarity and support with the people of Gaza – You are not forgotten 🇵🇸</p>
+    <p>&copy; 2025 ENCS3320 - Computer Networks | All rights reserved.</p>
+  </footer>
+
+  <!-- AOS JS + Dark Mode Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Dark Mode Toggle
+    const toggle = document.getElementById("dark-toggle");
+    const body = document.body;
+
+    // Load dark mode from storage
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+</body>
+</html>

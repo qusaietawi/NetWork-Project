@@ -1,0 +1,312 @@
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #fdf7f0; /* بيج فاتح جدًا */
+  color: #4a4a4a; /* رمادي غامق مائل للبني */
+  line-height: 1.8;
+  padding: 30px;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* ==== NAVIGATION ==== */
+nav {
+  background: rgba(255, 248, 240, 0.9); /* كريمي شفاف */
+  padding: 15px 25px;
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 24px rgba(200, 180, 160, 0.4);
+}
+nav a {
+  color: #6a5a45; /* بني دافئ */
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: 0.3s ease;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+}
+nav a:hover {
+  color: #c27c5a; /* برتقالي بني ناعم */
+  transform: scale(1.05);
+}
+
+/* ==== DARK MODE ==== */
+.dark-mode {
+  background: #3a2c22; /* بني غامق */
+  color: #e8d8c3; /* كريمي فاتح */
+}
+.dark-mode nav {
+  background: rgba(232, 216, 195, 0.15);
+}
+.dark-mode nav a {
+  color: #e8d8c3;
+  text-shadow: none;
+}
+.dark-mode nav a:hover {
+  color: #c27c5a;
+}
+.dark-mode .member {
+  background: #5c4a3b;
+}
+.dark-mode .gaza-section {
+  background: #503f30;
+}
+.dark-mode .gaza-text li,
+.dark-mode .gaza-text p,
+.dark-mode .gaza-text ol {
+  color: #d6c3aa;
+}
+.dark-mode input[type="text"] {
+  background: #7a6a58;
+  color: #fff;
+  border-color: #c27c5a;
+}
+.dark-mode button {
+  background-color: #c27c5a;
+  color: #3a2c22;
+}
+.dark-mode footer {
+  background: #2e2319;
+  color: #b8a38c;
+}
+.dark-mode footer p:first-child {
+  color: #c27c5a;
+}
+
+/* ==== DARK BUTTON ==== */
+.dark-btn {
+  background: none;
+  border: 2px solid #6a5a45;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 1.1rem;
+  color: #6a5a45;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-shadow: none;
+}
+.dark-btn:hover {
+  background-color: rgba(194, 124, 90, 0.2);
+}
+
+/* ==== HERO ==== */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  color: #8b6a4f; /* بني متوسط */
+  text-shadow: 0 0 5px #c27c5a44;
+}
+.highlight {
+  color: #c27c5a;
+  text-shadow: 0 0 6px #c27c5a88;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #7a6a5a;
+}
+
+/* ==== TEAM ==== */
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #8b6a4f;
+  text-shadow: 0 0 4px #c27c5a77;
+}
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+.member {
+  background: #fff6eccc; /* كريمي شفاف */
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  width: 260px;
+  box-shadow: 0 15px 35px rgba(194, 124, 90, 0.3);
+  transition: all 0.3s ease;
+}
+.member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(194, 124, 90, 0.5);
+}
+
+/* ==== صور الفريق - توهج خفيف دافئ ==== */
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #c27c5a;
+  box-shadow: 0 0 12px 4px rgba(194, 124, 90, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+.member img:hover {
+  box-shadow: 0 0 18px 6px rgba(194, 124, 90, 0.9);
+}
+
+/* ==== GAZA SECTION ==== */
+.gaza-section {
+  background: #fff6ec; /* أبيض كريمي */
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 50px;
+  box-shadow: 0 10px 28px rgba(194, 124, 90, 0.15);
+  margin-bottom: 60px;
+}
+.gaza-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+.gaza-content img {
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 6px rgba(194, 124, 90, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+.gaza-content img:hover {
+  box-shadow: 0 0 25px 8px rgba(194, 124, 90, 0.75);
+}
+.gaza-text {
+  flex: 1;
+}
+.gaza-text .italic {
+  font-style: italic;
+  color: #8b6a4f;
+}
+.gaza-text ul, .gaza-text ol {
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #a87c60;
+}
+
+/* ==== SEARCH ==== */
+.search-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+input[type="text"] {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #c27c5a;
+  width: 300px;
+  transition: 0.3s ease;
+  background: #fff8f0;
+  color: #6a5a45;
+}
+input[type="text"]:focus {
+  outline: none;
+  border-color: #c27c5a;
+  box-shadow: 0 0 10px rgba(194, 124, 90, 0.5);
+}
+button {
+  padding: 12px 22px;
+  background-color: #c27c5a;
+  color: #fff6ec;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background-color: #a96942;
+  transform: translateY(-2px);
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: #8b6a4f;
+  padding: 25px 15px;
+  border-top: 2px solid #c27c5a;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #fff6ec;
+}
+footer p:first-child {
+  font-weight: bold;
+  color: #fff6ec;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .gaza-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gaza-content img {
+    width: 100%;
+  }
+  input[type="text"] {
+    width: 90%;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ==== Event Page Styling ==== */
+.event-details {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff8f0cc; /* أبيض كريمي شفاف */
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(194, 124, 90, 0.15);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #6a5a45;
+}
+
+.event-details .event-text p {
+  margin-bottom: 18px;
+}
+
+.event-details ul {
+  padding-left: 25px;
+  margin: 20px 0;
+  color: #a87c60;
+}
+
+.event-details li {
+  margin-bottom: 10px;
+}
+
+.media-box {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+/* ==== صور الفعاليات - توهج بارز ==== */
+.event-media {
+  max-width: 90%;
+  height: auto;
+  border-radius: 14px;
+  border: 3px solid #c27c5a;
+  box-shadow: 0 0 20px 5px rgba(194, 124, 90, 0.6);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.event-media:hover {
+  box-shadow: 0 0 30px 8px rgba(194, 124, 90, 0.9);
+  transform: scale(1.02);
+}
